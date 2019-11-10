@@ -35,10 +35,10 @@
                     <div class="col col-sm-3">
                         <div class="card-options d-inline-block">
                             <a href="#"><i class="ik ik-inbox"></i></a>
-            
+
                             <!-- //link buat ke akun -->
                             <a href="/users/tambah"><i class="ik ik-plus"></i></a>
-            
+
                             <a href="#"><i class="ik ik-rotate-cw"></i></a>
                             <div class="dropdown d-inline-block">
                                 <a class="nav-link dropdown-toggle" href="#" id="moreDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ik ik-more-horizontal"></i></a>
@@ -71,7 +71,7 @@
                                     <div align="center ">
                                             <button class="btn btn-theme">Cari</button>
                                     </div>
-                                    
+
                                 </div>
                             </form>
                         </div>
@@ -93,11 +93,11 @@
                                 <th>Email</th>
                                 <th>Role</th>
                                 <th>Action</th>
-            
+
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($df_user as $daftar_user)                                        
+                            @foreach($df_user as $daftar_user)
                                 <tr>
                                     <th scope="row"> {{ $loop->iteration }} </th>
                                         <td> {{ $daftar_user->name }} </td>
@@ -105,13 +105,13 @@
                                         {{-- <td> {{ $daftar_user->users}} </td> --}}
                                         <td> {{ $daftar_user->role_name }} </td>
                                         <td>
-                                            <a href="users/edit/{{$daftar_user->userId}}" class="badge badge-success">Edit</a>
-                                            <a href="users/hapus/{{$daftar_user->userId}}" class="badge badge-danger">Delete</a>
+                                            <a href="/users/edit/{{$daftar_user->userId}}" class="badge badge-success">Edit</a>
+                                            <a href="/users/hapus/{{$daftar_user->userId}}" class="badge badge-danger">Delete</a>
                                     </td>
-                                    
+
                                 </tr>
                             @endforeach
-            
+
                         </tbody>
                     </table>
                 </div>

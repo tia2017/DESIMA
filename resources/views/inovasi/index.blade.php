@@ -76,7 +76,7 @@
 
                 </div>
             </div>
-            <div class="card-body">
+            {{-- <div class="card-body">
                 @if (session('status'))
                     <div class="alert alert-success">
                         {{ session('status') }}
@@ -96,15 +96,15 @@
                     </div>
                     <div class="row">
                         <div class="col-sm-12">
-                            <table id="advanced_table" class="table dataTable no-footer dtr-inline collapsed" role="grid" aria-describedby="advanced_table_info">
+                            <table id="table_ino" class="table dataTable no-footer dtr-inline collapsed">
                                 <thead>
-                                    <tr role="row" class="text text-xl-center">
-                                        <th class="sorting" rowspan="1" colspan="1" aria-label="Inovasi: activate to sort column ascending">Inovasi</th>
-                                        <th class="sorting" tabindex="0" aria-controls="advanced_table" rowspan="1" colspan="1" aria-label="Perangkat Daerah: activate to sort column ascending">Perangkat Daerah</th>
-                                        <th class="sorting" tabindex="0" aria-controls="advanced_table" rowspan="1" colspan="1" aria-label="Tahapan: activate to sort column ascending">Tahapan</th>
-                                        <th class="sorting" tabindex="0" aria-controls="advanced_table" rowspan="1" colspan="1" aria-label="Progres: activate to sort column ascending">Progres</th>
-                                        <th class="sorting" tabindex="0" aria-controls="advanced_table" rowspan="1" colspan="1" aria-label="Total Progres: activate to sort column ascending">Total Progres</th>
-                                        <th class="nosort sorting_disabled" tabindex="0" rowspan="1" colspan="2" aria-label="Opsi">Opsi</th>
+                                    <tr scope="row" class="text text-xl-center">
+                                        <th>Inovasi</th>
+                                        <th>Perangkat Daerah</th>
+                                        <th>Tahapan</th>
+                                        <th>Progres</th>
+                                        <th>Total Progres</th>
+                                        <th class="nosort sorting_disabled" colspan="2">Opsi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -138,6 +138,44 @@
                         </div>
                     </div>
                 </div>
+            </div> --}}
+            <div class="col-sm-12">
+                <div class="card-body">
+                    @if (session('status'))
+                    <div class="alert alert-success">
+                        {{ session('status') }}
+                    </div>
+                    @endif
+                        <table id="tableInovasi" class="table text-center">
+                            <thead>
+                                <tr>
+                                    <th scope="col">No</th>
+                                    <th>Inovasi</th>
+                                    <th>Perangkat Daerah</th>
+                                    <th>Tahapan</th>
+                                    <th>Progres</th>
+                                    <th>Total Progres</th>
+                                    <th class="sorting_asc_disabled sorting_desc_disabled">Opsi</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach($ino_steps as $ino_step)
+                                <tr>
+                                        <td scope="row">{{$loop->iteration}}</td>
+                                        <td><a href="/inovasi/detail/{{$ino_step->innovation->id}}" >{{$ino_step->innovation->name}}</a></td>
+                                        <td>{{$ino_step->innovation->institute->short_name}}</td>
+                                        <td>{{$ino_step->step->name}}</td>
+                                        <td>{{$ino_step->progress_persentage}}%</td>
+                                        <td>70%</td>
+                                        <td>
+                                            <a href="/inovasi/edit/{{$ino_step->innovation->id}}" class="badge badge-warning">Ubah</a>
+                                            <a href="/inovasi/hapus/{{$ino_step->innovation->id}}" class="badge badge-danger">Hapus</a>
+                                        </td>
+                                </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                    </div>
             </div>
         </div>
         <!-- END::Tabel Data Inovasi -->
@@ -148,9 +186,7 @@
 
 <script>
     $(document).ready(function() {
-    $('#advanced_table_wrapper').DataTable( {
-        "lengthMenu": [10, 25, 50, 100]]
-        } );
-    } );
+        $('#tableInovasi').DataTable();
+    });
 </script>
 @endsection
