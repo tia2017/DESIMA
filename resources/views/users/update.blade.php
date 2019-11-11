@@ -19,7 +19,7 @@
                         <nav class="breadcrumb-container" aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item">
-                                    <a href="/users"><i class="ik ik-home"></i></a>
+                                    <a href="/dashboard"><i class="ik ik-home"></i></a>
                                 </li>
                                 <li class="breadcrumb-item active"  aria-current="page">Kelola</li>
                             </ol>
@@ -35,8 +35,8 @@
                      <div class="tab-pane fade show active " id="previous-month" role="tabpanel" aria-labelledby="pills-setting-tab">
                         <div class="card-body">
                             <form class="form-horizontal" method="post" action="/users/update/{{ $df_user[0]->userId }}">
-                                {{ csrf_field() }}
-                                {{ method_field('PUT') }}
+                                {{ csrf_field() }}     
+                                {{ method_field('PUT') }}                     
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
                                         <label for="firstname">Nama</label>
@@ -61,7 +61,7 @@
                                         <label for="role">Role</label>
                                             <select id="role" name="role_id" class="form-control">
                                                 <option>Pilih Role</option>
-                                                @foreach($df_role as $role)
+                                                @foreach($df_role as $role)  
                                                     <option {{ $df_user[0]->role_id == $role->id ? 'selected="selected"' : '' }} value="{{ $role->id }}">{{$role->name}}</option>
                                                 @endforeach
                                             </select>
@@ -77,7 +77,7 @@
                                         <label for="role">Institute</label>
                                             <select id="role" name="institute_id" class="form-control">
                                                 <option>Pilih Institute</option>
-                                                @foreach($df_institute as $institute)
+                                                @foreach($df_institute as $institute)  
                                                     <option {{ $df_user[0]->institute_id == $institute->id ? 'selected="selected"' : '' }} value="{{ $institute->id }}">{{$institute->name}}</option>
                                                 @endforeach
                                             </select>
@@ -95,7 +95,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div>    
                                 <br>
                                 <div class="form-row">
                                     <div class="form-group col-md-12">
@@ -109,7 +109,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> 
             <!-- END::Tabel Data Users -->
 
         </div>

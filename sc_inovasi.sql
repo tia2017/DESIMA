@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 08, 2019 at 06:33 PM
+-- Generation Time: Nov 08, 2019 at 09:52 AM
 -- Server version: 10.1.37-MariaDB
--- PHP Version: 7.3.0
+-- PHP Version: 7.3.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -58,8 +58,7 @@ INSERT INTO `innovations` (`id`, `name`, `institute_id`, `innovation_type_id`, `
 (97, 'Test Sari Murni', 1, 1, 1, 1, 'Penjelasan Singkat Inovasi', 'Manfaat Inovasi', 'Keunikan/Kreativitas Inovasi', 'Potensi Pengembangan Inovasi', 'Strategi Menjaga Keberlangsungan', 'Analisis Risiko', 'Sumber Daya yang Digunakan', '2019-10-18', 'True', '2019-10-18 04:45:28', '2019-10-18 04:45:28'),
 (131, 'Inovasi Baru Gan', 2, 3, 1, 1, 'Penjelasan Singkat Inovasi', 'Manfaat Inovasi', 'Keunikan/Kreativitas Inovasi', 'Potensi Pengembangan Inovasi', 'Strategi Menjaga Keberlangsungan', 'Analisis Risiko', 'Sumber Daya yang Digunakan', '2019-11-04', 'True', '2019-11-04 08:16:54', '2019-11-04 08:16:54'),
 (133, 'Nama Singkat Inovasi', 1, 1, 1, 1, 'Penjelasan Singkat Inovasi', 'Manfaat Inovasi', 'Keunikan/Kreativitas Inova', 'tensi Pengembangan Inovasi', 'Menjaga Keberlangsungan', 'Analisis Risiko', 'ber Daya yang Digunakan', '2019-11-06', 'True', '2019-11-06 12:56:12', '2019-11-06 12:56:12'),
-(134, 'Tes Ipi 1', 5, 3, 4, 1, 'Tes Ipi 1', 'Tes Ipi 1', 'Tes Ipi 1', 'Tes Ipi 1', 'Tes Ipi 1', 'Tes Ipi 1', 'Tes Ipi 1', '2019-11-08', 'True', '2019-11-08 01:11:44', '2019-11-08 01:11:44'),
-(135, 'Tes Ipi 3', 6, 5, 3, 1, 'Tes Ipi 3 Penjelasan', 'Tes Ipi 3 Manfaat', 'Tes Ipi 3 Keunikan', 'Tes Ipi 3 Potensi', 'Tes Ipi 3 Strategi', 'Tes Ipi 3 Risiko', 'Tes Ipi 3 Sumber Daya', '2019-11-08', 'True', '2019-11-08 09:36:45', '2019-11-08 09:36:45');
+(134, 'Tes Ipi 1', 5, 3, 4, 1, 'Tes Ipi 1', 'Tes Ipi 1', 'Tes Ipi 1', 'Tes Ipi 1', 'Tes Ipi 1', 'Tes Ipi 1', 'Tes Ipi 1', '2019-11-08', 'True', '2019-11-08 01:11:44', '2019-11-08 01:11:44');
 
 -- --------------------------------------------------------
 
@@ -84,9 +83,7 @@ INSERT INTO `innovation_partners` (`id`, `innovation_id`, `partner_id`, `created
 (33, 131, 40, '2019-11-04 08:16:55', '2019-11-04 08:16:55'),
 (35, 133, 42, '2019-11-06 12:56:13', '2019-11-06 12:56:13'),
 (36, 134, 43, '2019-11-08 01:11:44', '2019-11-08 01:11:44'),
-(37, 134, 44, '2019-11-08 01:11:44', '2019-11-08 01:11:44'),
-(38, 135, 45, '2019-11-08 09:36:45', '2019-11-08 09:36:45'),
-(39, 135, 46, '2019-11-08 09:36:45', '2019-11-08 09:36:45');
+(37, 134, 44, '2019-11-08 01:11:44', '2019-11-08 01:11:44');
 
 -- --------------------------------------------------------
 
@@ -127,13 +124,7 @@ INSERT INTO `innovation_steps` (`id`, `innovation_id`, `step_id`, `explaination`
 (230, 134, 3, '', NULL, 100, '2019-11-08 01:11:44', '2019-11-08 01:11:44'),
 (231, 134, 4, 'Tes Ipi 1', NULL, 15, '2019-11-08 01:11:44', '2019-11-08 01:11:44'),
 (232, 134, 5, '', NULL, 0, '2019-11-08 01:11:44', '2019-11-08 01:11:44'),
-(233, 134, 6, '', NULL, 0, '2019-11-08 01:11:44', '2019-11-08 01:11:44'),
-(234, 135, 1, '', NULL, 100, '2019-11-08 09:36:45', '2019-11-08 09:36:45'),
-(235, 135, 2, '', NULL, 100, '2019-11-08 09:36:45', '2019-11-08 09:36:45'),
-(236, 135, 3, '', NULL, 100, '2019-11-08 09:36:45', '2019-11-08 09:36:45'),
-(237, 135, 4, '', NULL, 100, '2019-11-08 09:36:45', '2019-11-08 09:36:45'),
-(238, 135, 5, '', NULL, 100, '2019-11-08 09:36:45', '2019-11-08 09:36:45'),
-(239, 135, 6, 'Tes Ipi 3 Keterangan', 'Pintu KRL 01.jpg', 50, '2019-11-08 09:36:45', '2019-11-08 09:36:45');
+(233, 134, 6, '', NULL, 0, '2019-11-08 01:11:44', '2019-11-08 01:11:44');
 
 -- --------------------------------------------------------
 
@@ -253,9 +244,7 @@ INSERT INTO `partners` (`id`, `name`, `form`, `specialization`, `address`, `phon
 (41, 'asd', 'asd', NULL, NULL, NULL, NULL, '2019-11-06 12:53:35', '2019-11-06 12:53:35'),
 (42, 'Nama Mitra', 'Bentuk Mitra', NULL, NULL, NULL, NULL, '2019-11-06 12:56:13', '2019-11-06 12:56:13'),
 (43, 'Tes Ipi 1_1', 'Tes Ipi 1_1', NULL, NULL, NULL, NULL, '2019-11-08 01:11:44', '2019-11-08 01:11:44'),
-(44, 'Tes Ipi 1_2', 'Tes Ipi 1_2', NULL, NULL, NULL, NULL, '2019-11-08 01:11:44', '2019-11-08 01:11:44'),
-(45, 'Mantis', 'Perusahaan', NULL, NULL, NULL, NULL, '2019-11-08 09:36:45', '2019-11-08 09:36:45'),
-(46, 'Jas Putih', 'Komunitas', NULL, NULL, NULL, NULL, '2019-11-08 09:36:45', '2019-11-08 09:36:45');
+(44, 'Tes Ipi 1_2', 'Tes Ipi 1_2', NULL, NULL, NULL, NULL, '2019-11-08 01:11:44', '2019-11-08 01:11:44');
 
 -- --------------------------------------------------------
 
@@ -503,19 +492,19 @@ ALTER TABLE `users_detail`
 -- AUTO_INCREMENT for table `innovations`
 --
 ALTER TABLE `innovations`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=136;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=135;
 
 --
 -- AUTO_INCREMENT for table `innovation_partners`
 --
 ALTER TABLE `innovation_partners`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- AUTO_INCREMENT for table `innovation_steps`
 --
 ALTER TABLE `innovation_steps`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=240;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=234;
 
 --
 -- AUTO_INCREMENT for table `institutes`
@@ -533,7 +522,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `partners`
 --
 ALTER TABLE `partners`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 
 --
 -- AUTO_INCREMENT for table `pilars`
